@@ -7,7 +7,7 @@ export const Home = () => {
 
 	const getData = async () => {
 		const { data } = await API_NEWS.get();
-		setNews(data.articles);
+		setNews(data);
 	};
 
 	useEffect(() => {
@@ -16,8 +16,8 @@ export const Home = () => {
 
 	return (
 		<StyledMainTemplate>
-			{news &&
-				news.map((article) => (
+			{news["articles"] &&
+				news["articles"].map((article) => (
 					<div key={crypto.randomUUID()}>{article?.title}</div>
 				))}
 		</StyledMainTemplate>
