@@ -7,12 +7,12 @@ export const theme = {
 		white: "hsl(0, 0%, 100%)",
 	},
 	fonts: {
-		primary: "Oswald",
-		secondary: "Source Serif Pro",
+		primary: "Encode Sans",
+		secondary: "Gravitas One",
 		weights: {
-			light: 300,
-			medium: 500,
-			bold: 600,
+			light: 200,
+			regular: 400,
+			bold: 700,
 		},
 	},
 };

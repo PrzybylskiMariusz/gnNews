@@ -19,12 +19,12 @@ export const SideBar = styled.nav`
 
 		:hover {
 			color: ${({ theme }) => theme.colors.darkBlue};
-			font-weight: ${({ theme }) => theme.fonts.weights.medium};
+			font-weight: ${({ theme }) => theme.fonts.weights.regular};
 		}
 
 		&.active {
 			color: ${({ theme }) => theme.colors.darkBlue};
-			font-weight: ${({ theme }) => theme.fonts.weights.medium};
+			font-weight: ${({ theme }) => theme.fonts.weights.regular};
 		}
 
 		div {
