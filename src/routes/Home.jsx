@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_NEWS } from "../api/api";
+import { StyledArticle } from "../components/Article";
 import { StyledMainTemplate } from "../templates";
 
 export const Home = () => {
@@ -18,7 +19,12 @@ export const Home = () => {
 		<StyledMainTemplate>
 			{news["articles"] &&
 				news["articles"].map((article) => (
-					<div key={crypto.randomUUID()}>{article?.title}</div>
+					<StyledArticle
+						key={crypto.randomUUID()}
+						title={article.title}
+						source={article.source.name}
+						published={article.publishedAt}
+					/>
 				))}
 		</StyledMainTemplate>
 	);
