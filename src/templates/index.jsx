@@ -14,7 +14,6 @@ export const StyledMainTemplate = ({ children }) => {
 				<GlobalStyles />
 				<MainTemplate>
 					<StyledHeader>
-						<div>Logo</div>
 						<div>Switcher</div>
 					</StyledHeader>
 					<StyledSidebar />

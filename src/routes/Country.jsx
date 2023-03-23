@@ -5,7 +5,6 @@ import { StyledMainTemplate } from "../templates";
 
 export const Country = () => {
 	const { name } = useParams();
-	const [code, setCode] = useState("");
 	const [countryNews, setCountryNews] = useState([]);
 
 	const getCountryNews = async () => {

@@ -4,4 +4,5 @@ export const Footer = styled.footer`
 	grid-column-start: 1;
 	grid-column-end: 13;
 	padding: 2.4rem 0;
+	border-top: 1px solid ${({ theme }) => theme.grayishBlue};
 `;
