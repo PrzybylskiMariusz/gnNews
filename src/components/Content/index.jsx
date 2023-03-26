@@ -4,7 +4,7 @@ import { Content, Wrapper } from "./Content.styles";
 import { useSelector } from "react-redux";
 
 export const StyledContent = ({ children }) => {
-	const view = useSelector((state) => state.display.listView);
+	const view = useSelector((state) => state.display.gridView);
 	return (
 		<Content>
 			<StyledHeading>

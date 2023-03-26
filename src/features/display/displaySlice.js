@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	listView: true,
+	gridView: false,
 };
 
 export const displaySlice = createSlice({
@@ -9,7 +9,7 @@ export const displaySlice = createSlice({
 	initialState,
 	reducers: {
 		toggleView: (state) => {
-			state.listView = !state.listView;
+			state.gridView = !state.gridView;
 		},
 	},
 });

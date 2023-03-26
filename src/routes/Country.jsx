@@ -39,6 +39,8 @@ export const Country = () => {
 						title={article.title}
 						source={article.source.name}
 						published={article.publishedAt}
+						imageUrl={article.urlToImage}
+						description={article.description}
 					/>
 				))}
 		</StyledMainTemplate>

@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Article = styled.article`
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
+	justify-content: space-between;
+	gap: 1.6rem;
 	padding: 1.6rem;
 	margin-bottom: 1.6rem;
-	border-bottom: 1px solid ${({ theme }) => theme.colors.grayishBlue};
 	border-radius: 0.4rem;
+	box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
 	transition: background-color 0.3s ease-in-out;
 	cursor: pointer;
 

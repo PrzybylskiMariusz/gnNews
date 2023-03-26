@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 		displayType &&
 		css`
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+			gap: 1rem;
 		`}
 `;
