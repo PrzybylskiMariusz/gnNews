@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_CODES, API_COUNTRY_NEWS, API_KEY } from "../api/api";
+import { StyledArticle } from "../components/Article";
 import { StyledMainTemplate } from "../templates";
 
 export const Country = () => {
@@ -33,7 +34,12 @@ export const Country = () => {
 		<StyledMainTemplate>
 			{countryNews["articles"] &&
 				countryNews["articles"].map((article) => (
-					<div key={crypto.randomUUID()}>{article?.title}</div>
+					<StyledArticle
+						key={crypto.randomUUID()}
+						title={article.title}
+						source={article.source.name}
+						published={article.publishedAt}
+					/>
 				))}
 		</StyledMainTemplate>
 	);
