@@ -1,7 +1,10 @@
 import { StyledHeading } from "./components/Heading";
 import { Content, Wrapper } from "./Content.styles";
 
+import { useSelector } from "react-redux";
+
 export const StyledContent = ({ children }) => {
+	const view = useSelector((state) => state.display.listView);
 	return (
 		<Content>
 			<StyledHeading>
@@ -10,7 +13,7 @@ export const StyledContent = ({ children }) => {
 				<br /> around
 				<br /> the world
 			</StyledHeading>
-			<Wrapper displayType={false}>{children}</Wrapper>
+			<Wrapper displayType={view}>{children}</Wrapper>
 		</Content>
 	);
 };

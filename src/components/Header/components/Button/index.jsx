@@ -1,5 +1,5 @@
 import { Button } from "./Button.styles";
 
-export const StyledButton = ({ children }) => {
-	return <Button>{children}</Button>;
+export const StyledButton = ({ onClick, children }) => {
+	return <Button onClick={onClick}>{children}</Button>;
 };
