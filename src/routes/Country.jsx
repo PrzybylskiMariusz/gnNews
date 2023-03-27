@@ -41,6 +41,9 @@ export const Country = () => {
 						published={article.publishedAt}
 						imageUrl={article.urlToImage}
 						description={article.description}
+						content={article.content}
+						author={article.author}
+						url={article.url}
 					/>
 				))}
 		</StyledMainTemplate>

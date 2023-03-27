@@ -6,6 +6,7 @@ export const theme = {
 		grayishBlue: "hsl(228, 12%, 48%)",
 		white: "hsl(0, 0%, 100%)",
 		whiteOp: "hsla(0, 0%, 100%, 0.4)",
+		blackOp: "hsla(0, 0%, 0%, 0.6)",
 	},
 	fonts: {
 		primary: "Encode Sans",

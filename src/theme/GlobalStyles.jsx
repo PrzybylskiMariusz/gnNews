@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle(
 			color: ${theme.colors.darkBlue};
 			font-size: 1.6rem;
 			font-family: inherit;
+			position: relative;
 		}
 	`
 );
