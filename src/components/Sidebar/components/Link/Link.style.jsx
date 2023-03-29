@@ -22,5 +22,8 @@ export const Link = styled(NavLink)(
 			color: ${theme.colors.darkBlue};
 			font-weight: ${theme.fonts.weights.regular};
 		}
+		@media screen and (max-width: 1024px) {
+			grid-template-columns: 3.5rem 1fr;
+		}
 	`
 );

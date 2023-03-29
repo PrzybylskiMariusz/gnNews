@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { API_COUNTRIES } from "../../api/api";
 import { Link } from "./components/Link/Link.style";
 import { StyledLinkAvatar } from "./components/LinkAvatar";
+import { StyledMenuIcon } from "./components/MenuIcon";
 import { SideBar } from "./Sidebar.styles";
 
 export const StyledSidebar = () => {
 	const [countries, setCountries] = useState([]);
+	const [visible, setVisible] = useState(false);
 
 	const getLinks = async () => {
 		const { data } = await API_COUNTRIES.get();
@@ -24,18 +26,34 @@ export const StyledSidebar = () => {
 		setCountries(sortedData);
 	};
 
+	const toggleMobileVisibility = () => {
+		setVisible(!visible);
+	};
+
 	useEffect(() => {
 		getLinks();
 	}, []);
 	return (
-		<SideBar>
-			{countries &&
-				countries.map((country) => (
-					<Link to={`/country/${country.name}`} key={crypto.randomUUID()}>
-						<StyledLinkAvatar imgSrc={country.flag} />
-						{country.name}
-					</Link>
-				))}
-		</SideBar>
+		<>
+			<StyledMenuIcon onClick={toggleMobileVisibility} />
+			<SideBar>
+				{countries &&
+					countries.map((country) => (
+						<Link to={`/country/${country.name}`} key={crypto.randomUUID()}>
+							<StyledLinkAvatar imgSrc={country.flag} />
+							{country.name}
+						</Link>
+					))}
+			</SideBar>
+			<SideBar mobile={true} visible={visible}>
+				{countries &&
+					countries.map((country) => (
+						<Link to={`/country/${country.name}`} key={crypto.randomUUID()}>
+							<StyledLinkAvatar imgSrc={country.flag} />
+							{country.name}
+						</Link>
+					))}
+			</SideBar>
+		</>
 	);
 };

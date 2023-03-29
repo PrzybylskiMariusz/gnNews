@@ -4,6 +4,11 @@ export const Content = styled.section`
 	grid-column-start: 4;
 	grid-column-end: 13;
 	padding: 2.4rem;
+
+	@media screen and (max-width: 768px) {
+		grid-column-start: 1;
+		padding: 1.6rem 0;
+	}
 `;
 
 export const Wrapper = styled.div`

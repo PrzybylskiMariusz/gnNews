@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 1.6rem;
-			width: 50%;
+			width: 70%;
 			background-color: ${({ theme }) => theme.colors.cream};
 			border-radius: 0.4rem;
 			padding: 1.6rem;

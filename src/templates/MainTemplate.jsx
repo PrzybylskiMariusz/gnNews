@@ -6,4 +6,5 @@ export const MainTemplate = styled.main`
 	grid-template-columns: repeat(12, 1fr);
 	gap: 1.6rem;
 	margin: 0 auto;
+	position: relative;
 `;
