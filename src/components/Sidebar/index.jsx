@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_COUNTRIES } from "../../api/api";
-import { Link } from "./components/Link/Link.style";
+import { StyledLink } from "./components/Link";
 import { StyledLinkAvatar } from "./components/LinkAvatar";
 import { StyledMenuIcon } from "./components/MenuIcon";
 import { SideBar } from "./Sidebar.styles";
@@ -39,19 +39,23 @@ export const StyledSidebar = () => {
 			<SideBar>
 				{countries &&
 					countries.map((country) => (
-						<Link to={`/country/${country.name}`} key={crypto.randomUUID()}>
+						<StyledLink
+							to={`/country/${country.name}`}
+							key={crypto.randomUUID()}>
 							<StyledLinkAvatar imgSrc={country.flag} />
 							{country.name}
-						</Link>
+						</StyledLink>
 					))}
 			</SideBar>
 			<SideBar mobile={true} visible={visible}>
 				{countries &&
 					countries.map((country) => (
-						<Link to={`/country/${country.name}`} key={crypto.randomUUID()}>
+						<StyledLink
+							to={`/country/${country.name}`}
+							key={crypto.randomUUID()}>
 							<StyledLinkAvatar imgSrc={country.flag} />
 							{country.name}
-						</Link>
+						</StyledLink>
 					))}
 			</SideBar>
 		</>
