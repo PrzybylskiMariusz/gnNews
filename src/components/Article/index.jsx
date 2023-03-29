@@ -3,8 +3,8 @@ import { BiX } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { Article } from "./Article.styles";
 import { StyledDescription } from "./components/Description";
-import { Info } from "./components/Info/Info.styles";
-import { Modal } from "./components/Modal/Modal.styles";
+import { StyledInfo } from "./components/Info";
+import { StyledModal } from "../../components/Modal";
 import { StyledPicture } from "./components/Picture";
 import { StyledTitle } from "./components/Title";
 import { StyledWrapper } from "../Wrapper";
@@ -36,24 +36,24 @@ export const StyledArticle = ({
 					? description && <StyledDescription>{description}</StyledDescription>
 					: null}
 				<StyledWrapper>
-					<Info>{publishedAt.toLocaleString()}</Info>
-					<Info>{source}</Info>
+					<StyledInfo>{publishedAt.toLocaleString()}</StyledInfo>
+					<StyledInfo>{source}</StyledInfo>
 				</StyledWrapper>
 			</Article>
 			{isModalOpen ? (
-				<Modal>
+				<StyledModal>
 					<StyledWrapper column>
 						<BiX onClick={handleArticleClick} />
 						<StyledTitle>{title}</StyledTitle>
-						<Info>{author}</Info>
+						<StyledInfo>{author}</StyledInfo>
 						<div>{content}</div>
-						<Info>
+						<StyledInfo>
 							<a href={url} target="_blank" rel="noopener noreferrer">
 								{url}
 							</a>
-						</Info>
+						</StyledInfo>
 					</StyledWrapper>
-				</Modal>
+				</StyledModal>
 			) : null}
 		</>
 	);
