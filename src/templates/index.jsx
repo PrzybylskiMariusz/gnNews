@@ -7,18 +7,16 @@ import { GlobalStyles } from "../theme/GlobalStyles";
 import { theme } from "../theme/theme";
 import { MainTemplate } from "./MainTemplate";
 
-export const StyledMainTemplate = ({ children }) => {
+export const StyledMainTemplate = ({ children, total }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<>
 				<GlobalStyles />
 				<MainTemplate>
-					<StyledHeader>
-						<div>Switcher</div>
-					</StyledHeader>
+					<StyledHeader />
 					<StyledSidebar />
 					<StyledContent> {children}</StyledContent>
-					<StyledFooter>Footer</StyledFooter>
+					<StyledFooter total={total} />
 				</MainTemplate>
 			</>
 		</ThemeProvider>

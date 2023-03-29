@@ -31,7 +31,7 @@ export const Country = () => {
 	}, [name]);
 
 	return (
-		<StyledMainTemplate>
+		<StyledMainTemplate total={countryNews.totalResults}>
 			{countryNews["articles"] &&
 				countryNews["articles"].map((article) => (
 					<StyledArticle

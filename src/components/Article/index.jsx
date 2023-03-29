@@ -7,7 +7,7 @@ import { Info } from "./components/Info/Info.styles";
 import { Modal } from "./components/Modal/Modal.styles";
 import { StyledPicture } from "./components/Picture";
 import { StyledTitle } from "./components/Title";
-import { StyledWrapper } from "./components/Wrapper";
+import { StyledWrapper } from "../Wrapper";
 
 export const StyledArticle = ({
 	title,

@@ -16,7 +16,7 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<StyledMainTemplate>
+		<StyledMainTemplate total={news.totalResults}>
 			{news["articles"] &&
 				news["articles"].map((article) => (
 					<StyledArticle
